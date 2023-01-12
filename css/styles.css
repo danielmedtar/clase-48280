@@ -307,7 +307,7 @@ aside {
 /*GRADIENTES*/
 /*Lineal*/
 .gradiente-lineal {
-    background-image: linear-gradient(red, yellow);
+    background-color: blue;
 }
 
 /*Radial*/
@@ -461,5 +461,9 @@ h1 {
     }
  }
  
-
+ /*CLASE DE GIT*/
+.titulo-git {
+    font-size: 2rem;
+    color: #fff;
+}
 
