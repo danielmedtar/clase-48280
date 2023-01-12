@@ -1,3 +1,8 @@
 Comandos:
 
 1. git init este sirve para empezar a trabajar con git. Solo se escribe la primera vez
+
+2. git status me indica siempre el estado en el que está mi repositorio.
+
+3. git add .
+Con git add añadimos todos los archivos que git no encuentre.
