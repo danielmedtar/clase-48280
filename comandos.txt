@@ -13,3 +13,7 @@ Para confirmar los cambios realizados en el código. Siempre debe llevar un mens
 .gitignore (para investigar)
 
 5. git branch
+Consultar las ramas del repositorio
+
+6. git branch rama-ejemplo
+crea una nueva rama con el nombre que se quiera (sin espacios)
