@@ -17,3 +17,9 @@ Consultar las ramas del repositorio
 
 6. git branch rama-ejemplo
 crea una nueva rama con el nombre que se quiera (sin espacios)
+
+7. git checkout rama-ejemplo
+Moverse a la nueva rama.
+
+8. git merge rama-ejemplo
+Para fusionar con la main los cambios realizados en la rama. El git merge SIEMPRE DEBE HACERSE DESDE LA RAMA MAIN
