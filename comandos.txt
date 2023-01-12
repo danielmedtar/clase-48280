@@ -1,0 +1,3 @@
+Comandos:
+
+1. git init este sirve para empezar a trabajar con git. Solo se escribe la primera vez

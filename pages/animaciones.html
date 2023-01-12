@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Animaciones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Document</title>
+</head>
+<body class="gradiente-radial">
+    <header>
+        <a href="../index.html">
+            <img src="../img/logo-coderhouse.png" alt="Logo Coderhouse" title="Este es el logo de Coderhouse" class="logo">
+        </a>
+    
+        <!--Estructura de un menu de navegación-->
+        <nav>
+            <ul class="menu__nav">
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                
+                <li>
+                    <a href="areas.html">Áreas</a>
+                </li>
+                <li>
+                    <a href="animaciones.html">Animaciones y transiciones</a>
+                </li>
+    
+                <li>
+                    <a href="#footer">Ir al footer</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="animate__animated animate__backInLeft">
+        <h1>Animaciones y transiciones</h1>
+
+        <div class="caja-animaciones"></div>
+
+        <img src="../img/remera_javascript.jpg" alt="Remera Javascript" class="javascript">
+    </section>
+
+    <section>
+        <div class="wow animate__animated animate__bounce barra-progreso">
+            <div class="barra-rellena"></div>
+        </div>
+        <div class="keyframe"></div>        
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+</body>
+</html>
