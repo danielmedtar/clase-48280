@@ -12,8 +12,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+    <!-- ARCHIVO CSS DE BOOTSTRAP -->
+    <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
+
+    <!-- LINK DE BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- MI PROPIO CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    <title>Clase 9 - GIT</title>
+    <title>Clase 11 - BOOTSTRAP</title>
 </head>
 <body class="gradiente-lineal">
     
@@ -46,83 +54,93 @@
 </header>
 
 
-<section id="productos">
-    <h1 class="titulo-git">Soy un título creado en una rama</h1>
+<section id="productos" class="container-fluid">
+    <h1 class="titulo-git lead">Soy un título creado en una rama</h1>
     <h2>Soy un titulo creado para el merge</h2>
     <h3>Estoy subiendo a Github</h3>
-    <!-- Card 1 -->
-    <!-- Div es el bloque -->
-    <div class="card">
-        <img class="card__imagen" src="img/remera_html5.jpg" alt="Remera HTML 5"> <!--La imagen es un elemento-->
 
-        <h4 class="card__titulo">Remera HTML</h4><!--h4 es un elemento-->
-        <p class="card__precio">$5.000</p>
+    <div class="padre-cards">
+        <!-- Card 1 -->
+        <!-- Div es el bloque -->
+        <div class="card">
+            <img class="card__imagen" src="img/remera_html5.jpg" alt="Remera HTML 5"> <!--La imagen es un elemento-->
 
-        <p class="card__descripcion">Esta remera está hecha de algodón y está disponible en distintos talles.</p><!--p es un elemento-->
-        
-        <p class="card__oferta">50% de descuento</p>
-        <button class="boton">Agregar al carrito</button>
+            <h4 class="card__titulo">Remera HTML</h4><!--h4 es un elemento-->
+            <p class="card__precio">$5.000</p>
+
+            <p class="card__descripcion">Esta remera está hecha de algodón y está disponible en distintos talles.</p>
+            <!--p es un elemento-->
+
+            <p class="card__oferta">50% de descuento</p>
+            <button class="boton">Agregar al carrito</button>
+        </div>
+
+        <div class="card">
+            <img class="card__imagen" src="img/remera_javascript.jpg" alt="Remera HTML 5"> <!--La imagen es un elemento-->
+
+            <h4 class="card__titulo">Remera HTML</h4><!--h4 es un elemento-->
+            <p class="card__precio">$5.000</p>
+
+            <p class="card__descripcion">Esta remera está hecha de algodón y está disponible en distintos talles.</p>
+            <!--p es un elemento-->
+
+            <p class="card__oferta">50% de descuento</p>
+            <button class="boton">Agregar al carrito</button>
+        </div>
+
+        <div class="card">
+            <img class="card__imagen" src="img/remera_github.jpg" alt="Remera HTML 5"> <!--La imagen es un elemento-->
+
+            <h4 class="card__titulo">Remera HTML</h4><!--h4 es un elemento-->
+            <p class="card__precio">$5.000</p>
+
+            <p class="card__descripcion">Esta remera está hecha de algodón y está disponible en distintos talles.</p>
+            <!--p es un elemento-->
+
+            <p class="card__oferta">50% de descuento</p>
+            <button class="boton">Agregar al carrito</button>
+        </div>
+
+        <div class="card">
+            <img class="card__imagen" src="img/logo-coderhouse.png" alt="Remera HTML 5"> <!--La imagen es un elemento-->
+
+            <h4 class="card__titulo">Remera HTML</h4><!--h4 es un elemento-->
+            <p class="card__precio">$5.000</p>
+
+            <p class="card__descripcion">Esta remera está hecha de algodón y está disponible en distintos talles.</p>
+            <!--p es un elemento-->
+
+            <p class="card__oferta">50% de descuento</p>
+            <button class="boton">Agregar al carrito</button>
+        </div>
+
+        <div class="card">
+            <img class="card__imagen" src="img/remera_html5.jpg" alt="Remera HTML 5"> <!--La imagen es un elemento-->
+
+            <h4 class="card__titulo">Remera HTML</h4><!--h4 es un elemento-->
+            <p class="card__precio">$5.000</p>
+
+            <p class="card__descripcion">Esta remera está hecha de algodón y está disponible en distintos talles.</p>
+            <!--p es un elemento-->
+
+            <p class="card__oferta">50% de descuento</p>
+            <button class="boton">Agregar al carrito</button>
+        </div>
+
+        <div class="card">
+            <img class="card__imagen" src="img/remera_html5.jpg" alt="Remera HTML 5"> <!--La imagen es un elemento-->
+
+            <h4 class="card__titulo">Remera HTML</h4><!--h4 es un elemento-->
+            <p class="card__precio">$5.000</p>
+
+            <p class="card__descripcion">Esta remera está hecha de algodón y está disponible en distintos talles.</p>
+            <!--p es un elemento-->
+
+            <p class="card__oferta">50% de descuento</p>
+            <button class="boton">Agregar al carrito</button>
+        </div>
     </div>
-
-    <div class="card">
-        <img class="card__imagen" src="img/remera_javascript.jpg" alt="Remera HTML 5"> <!--La imagen es un elemento-->
-
-        <h4 class="card__titulo">Remera HTML</h4><!--h4 es un elemento-->
-        <p class="card__precio">$5.000</p>
-
-        <p class="card__descripcion">Esta remera está hecha de algodón y está disponible en distintos talles.</p><!--p es un elemento-->
-        
-        <p class="card__oferta">50% de descuento</p>
-        <button class="boton">Agregar al carrito</button>
-    </div>
-
-    <div class="card">
-        <img class="card__imagen" src="img/remera_github.jpg" alt="Remera HTML 5"> <!--La imagen es un elemento-->
-
-        <h4 class="card__titulo">Remera HTML</h4><!--h4 es un elemento-->
-        <p class="card__precio">$5.000</p>
-
-        <p class="card__descripcion">Esta remera está hecha de algodón y está disponible en distintos talles.</p><!--p es un elemento-->
-        
-        <p class="card__oferta">50% de descuento</p>
-        <button class="boton">Agregar al carrito</button>
-    </div>
-
-    <div class="card">
-        <img class="card__imagen" src="img/logo-coderhouse.png" alt="Remera HTML 5"> <!--La imagen es un elemento-->
-
-        <h4 class="card__titulo">Remera HTML</h4><!--h4 es un elemento-->
-        <p class="card__precio">$5.000</p>
-
-        <p class="card__descripcion">Esta remera está hecha de algodón y está disponible en distintos talles.</p><!--p es un elemento-->
-        
-        <p class="card__oferta">50% de descuento</p>
-        <button class="boton">Agregar al carrito</button>
-    </div>
-
-    <div class="card">
-        <img class="card__imagen" src="img/remera_html5.jpg" alt="Remera HTML 5"> <!--La imagen es un elemento-->
-
-        <h4 class="card__titulo">Remera HTML</h4><!--h4 es un elemento-->
-        <p class="card__precio">$5.000</p>
-
-        <p class="card__descripcion">Esta remera está hecha de algodón y está disponible en distintos talles.</p><!--p es un elemento-->
-        
-        <p class="card__oferta">50% de descuento</p>
-        <button class="boton">Agregar al carrito</button>
-    </div>
-
-    <div class="card">
-        <img class="card__imagen" src="img/remera_html5.jpg" alt="Remera HTML 5"> <!--La imagen es un elemento-->
-
-        <h4 class="card__titulo">Remera HTML</h4><!--h4 es un elemento-->
-        <p class="card__precio">$5.000</p>
-
-        <p class="card__descripcion">Esta remera está hecha de algodón y está disponible en distintos talles.</p><!--p es un elemento-->
-        
-        <p class="card__oferta">50% de descuento</p>
-        <button class="boton">Agregar al carrito</button>
-    </div>
+    
 </section>
 
 <section>
@@ -131,9 +149,17 @@
 </section>
 
 
-<footer id="footer">
+<footer id="footer" class="container">
     <p class="color-morado">Todos los derechos reservados. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor dolorum esse quos similique, aut et magnam quibusdam ducimus! Ipsum repellat dolore doloremque vero numquam totam velit consequatur ut quo! At.</p>
 </footer>
+
+<!-- ARCHIVO JAVASCRIPT DE BOOTSTRAP SIEMPRE ANTES DEL CIERRE DEL BODY -->
+<!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
+
+<!-- LINK DE BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
 
 </body>
 </html>

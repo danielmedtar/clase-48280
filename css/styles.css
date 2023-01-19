@@ -51,10 +51,10 @@ img {
 #productos {
     margin-top: 50px;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    align-content: flex-start;
     gap: 5rem;
 }
 
@@ -450,6 +450,7 @@ h1 {
     animation-duration: 2s;
     animation-name: aparecer;
     animation-iteration-count: infinite;
+font-family: 'Roboto', sans-serif!important;
 }
 
 @keyframes aparecer {
@@ -465,5 +466,23 @@ h1 {
 .titulo-git {
     font-size: 2rem;
     color: #fff;
+}
+
+/*BOOTSTRAP*/
+.padre-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .padre-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+#carouselExample {
+    width: 400px;
 }
 
