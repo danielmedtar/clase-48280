@@ -570,7 +570,7 @@ font-family: 'Roboto', sans-serif!important;
     }
 }
 
-@media (min-width: 992px) {
+@media (max-width: 992px) and (min-width: 769px) {
     .container-cards {
         grid-template-columns: repeat(2, 1fr);
     }
