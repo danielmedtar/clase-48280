@@ -1,0 +1,139 @@
+/*CLASE 12 PSEUDOCLASES*/
+.body-index {
+    background-color: #000;
+    color: #fff;
+}
+
+/*FIRST*/
+.pseudo1 p:first-of-type {
+    color: red;
+}
+
+/*.pseudo1 p:first-child {
+    color: red;
+}*/
+
+/*LAST*/
+.pseudo1 p:last-of-type {
+    color: red;
+}
+
+/*.pseudo1 p:last-child {
+    color: red;
+}*/
+
+/*A elementos impares o pares*/
+/*Elementos pares*/
+/* .pseudo1 p:nth-child(even) {
+    background-color: blue;
+} */
+
+.pseudo1 p:nth-of-type(4) {
+    background-color: yellow;
+}
+
+/*Elementos impares*/
+.pseudo1 p:nth-child(odd) {
+    background-color: green;
+}
+
+/*Target*/
+.nav-link {
+    background-color: yellow;
+}
+
+/*.nav-item {
+    margin-bottom: 20px;
+}*/
+
+
+.nav-item:not(:first-of-type) {
+    margin-bottom: 20px;
+}
+
+
+.nav-link:hover {
+    background-color: blue;
+}
+
+.nav-link:active {
+    background-color: orange;
+}
+
+/*FILTRO DE PRODUCTOS*/
+.container-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+@media (max-width: $tablet) {
+    .container-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+    .container-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.container-opciones {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.container-opciones label {
+    cursor: pointer;
+    padding: 8px 15px;
+}
+
+.container-opciones label:nth-of-type(odd) {
+    background-color: red;
+}
+
+.container-opciones label:nth-of-type(even) {
+    background-color: green;
+}
+
+#remeras,
+#pc,
+#todos {
+    display: none;
+}
+
+.card-remeras,
+.card-pc {
+    display: none;
+}
+
+#remeras:checked ~ .container-cards .card-remeras,
+#pc:checked ~ .container-cards .card-pc {
+    display: flex;
+}
+
+
+/*ANTES DE SASS*/
+// #todos:checked ~ .container-cards .card-remeras,
+// #todos:checked ~ .container-cards .card-pc {
+//     display: flex;
+// }
+
+/*USANDO SASS SASS*/
+#todos {
+    &:checked ~ .container-cards .card-remeras,
+    &:checked ~ .container-cards .card-pc {
+        display: flex;
+    }
+}

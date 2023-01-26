@@ -1,623 +1,474 @@
+@charset "UTF-8";
+/*Imports desde lo macro a lo micro*/
+/*VARIABLES PARA PALETA DE COLORES*/
+/*ESPACIADOS*/
+/*fuentes*/
+/*Resoluciones*/
 /*root para crear variables*/
-:root {
-    --color-principal: blue;
-    --color-secundario: yellow;
-}
-
 /*Reseteo CSS*/
 * {
-    margin: 0;
-    padding: 0;
-}
+  margin: 0;
+  padding: 0; }
 
 header {
-
-    background-color: var(--color-principal);
-    width: 100%;
-    z-index: 1;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
+  background-color: pink;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; }
 
 a {
-    text-decoration: none;
-}
+  text-decoration: none; }
 
 img {
-    max-width: 100%;
-}
+  max-width: 100%; }
 
 .logo {
-    display: block;
-    margin: 0 auto;
-    width: 100px;
-}
+  display: block;
+  margin: 0 auto;
+  width: 100px; }
 
+/*ANIDACION*/
+/*ANTES DE USAR SASS*/
+/*USANDO SASS*/
 .menu__nav {
-    display: flex;
-    list-style: none;
-    text-align: center;
-    gap: 1rem;
-}
-
-.menu__nav li a {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  gap: 1rem; }
+  .menu__nav li a {
     color: #fff;
-    transition: all .3s;
-}
-
-.menu__nav li a:hover {
-    background-color: #000;
-    color: green;
-    padding: 10px;
-    border-radius: 10%;
-}
-
-/*Estilo de las cards*/
-#productos {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-}
-
-/*Codigo de #productos*/
-.card {
-    background-color: orange;
-    padding: 3rem;
-    margin: 2rem 0;
-    width: 200px;
-    border: solid 3px red;
-    position: relative;
-}
-
-.card__oferta {
-    position: absolute;
-    top: 30px;
-    right: -50px;
-    background-color: green;
-}
-
-.card__imagen {
-    width: 200px;
-
-}
-
-.card__titulo {
-    margin: 1rem 0;
-}
-
-/*GRIDS POR AREAS*/
-/* GRID MOBILE FIRST */
-
-/*CODIGO PARA CELULAR*/
-/*IMPLICITAMENTE, ESTE CÓDIGO VA DESDE 0PX HASTA 767PX*/
-#grilla {
-    display: grid;
-    grid-template-areas:
-        "menu cabecera cabecera"
-        "menu productos publicidad"
-        "menu servicios publicidad"
-        "menu footer footer";
-    grid-template-rows: 100px 1fr 1fr 75px; 
-    grid-template-columns: 20% auto 15%;
-
-    column-gap: 10px;
-    row-gap: 10px;
-
-    height: 100vh;/*vh = viewport height*/
-}
-
-
-.border {
-    border: 1px solid black;
-    background-color: yellow;
-}
-
-/*Cuando la pantalla mida COMO MINIMO 768 PX (TABLET) HAGA ESTE CÓDIGO*/
-/*En mobile first dentro de las media queries solo escribir lo que SE NECESITA CAMBIAR*/
-@media screen and (min-width: 768px) {
-	#grilla {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    .border {
-        border: 4px solid black;
-        background-color: blue;
-    }
-}
-
-/*Cuando la pantalla mida COMO MINIMO 1024PX (NOTEBOOKS Y PCs chicas) HAGA ESTE CÓDIGO*/
-
-@media screen and (min-width: 1024px) {
-	#grilla {
-            grid-template-columns: repeat(3, 1fr);
-      }
-      .border {
-    	border: 4px solid black;
-    	background-color: green;
-     }
-}
-
-header {
-    grid-area: cabecera;
-}
-
-footer {
-    grid-area: footer;
-}
-
-section#productosgrid {
-    grid-area: productos;     
-}
-
-section#servicios {
-    grid-area: servicios;     
-}
-
-nav {
-    grid-area: menu;
-}
-
-aside {
-    grid-area: publicidad;
-}
-
-/*EJEMPLO DEL PROFE*/
-
-/*Usando Mobile First*/
-#body-ejemplo {
-    display: grid;
-    grid-template-areas: 
-    "cabecera-profe"
-    "galeria"
-    "banners"
-    "footer-profe";
-    grid-template-columns: 1fr;
-    background-color: red;
-}
-
-/*Body en 768px tablet*/
-@media screen and (min-width: 768px) {
-    #body-ejemplo {
-        grid-template-areas:
-        "cabecera-profe cabecera-profe"
-        "galeria galeria"
-        "banners banners"
-        "footer-profe footer-profe";
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/*Estilos del header*/
-#header-profe {
-    grid-area: cabecera-profe;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 3rem;
-}
-
-@media screen and (min-width: 768px) {
-    #header-profe {
-        flex-direction: row;
-    }
-}
-
-.nav-profe {
-    list-style: none;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-
-.nav-profe li a {
-    color: white;
-}
-
-/*Estilos galeria*/
-#galeria-profe {
-    grid-area: galeria;
-}
-
-#galeria-profe h2 {
-    text-align: center;
-}
-
-.fotos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-@media screen and (min-width: 768px) {
-    .fotos {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-        column-gap: 1rem;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .fotos {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.fotos img {
-    width: 20rem;
-    height: 10rem;
-}
-
-
-/*ESTILO DE LOS BANNERS*/
-#banners-profe {
-    grid-area: banners;
-    margin-top: 2rem;
-}
-
-#banners-profe h3 {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.padre-banner {
-    background-color: #eaeaea;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.5rem;
-}
-
-@media screen and (min-width: 768px) {
-    .padre-banner {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .padre-banner {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-.hijo-banner {
-    text-align: center;
-}
-
-
-/*Estilos del footer*/
-#footer-profe {
-    grid-area: footer-profe;
-    margin-top: 2rem;
-    background-color: #000;
-}
-
-#footer-profe p {
-    font-size: 1.8rem;
-    color: white;
-    text-align: center;
-}
-
-/*CLASE 8: ANIMACIONES*/
-/*GRADIENTES*/
-/*Lineal*/
-.gradiente-lineal {
-    background-color: blue;
-}
-
-/*Radial*/
-
-.gradiente-radial {
-    background-image: radial-gradient(red 5%, yellow 15%, green 60%);
-}
-
-/*TRANSFORMACIONES*/
-.caja-animaciones {
-    background-image: url(../img/remera_html5.jpg);
-    width: 300px;
-    height: 300px;
-
-    /*Translate*/
-    /*translate (lleva dos valores, el primero mueve de izquierda a derecha y el segundo de arriba hacia abajo)*/
-    /*transform: translate(50px, 100px);*/
-    
-    /*Para mover a un solo lado usar X o Y*/
-    transform: translateX(60px);
-
-    /*Rotate*/
-    /*Valores siempre en grados (degress)*/
-    /* transform: rotateX(70deg); */
-
-    /*Scale*/
-    /* transform: scaleY(2); */
-
-    /*Skew*/
-    /* transform: skew(20deg, 10deg); */
-    /* transform: skewX(20deg); */
-    transition: height 3s, width 3s;
-}
-
-.caja-animaciones:hover {
-    /* transform: scale(2); */
-    /* margin-top: 400px; */
-    height: 400px;
-    width: 600px;
-}
-
-.javascript {
-    transition: all 1s;
-}
-
-.javascript:hover {
-    transform: scale(1.5, 1.5);
-    cursor: pointer;
-}
-
-.focus-animado {
-    transition: all 1s;
-}
-
-.focus-animado:focus {
-    width: 400px;
-}
-
-/*KEYFRAMES*/
-/*EJEMPLO DE LA DIAPOSITIVA*/
-.keyframe {
-    margin-top: 60px;
-    background-color: black;
-    width: 250px;
-    height: 250px;
-
-    /*Nombre de la animacion*/
-    animation-name: un_efecto;
-
-    /*Por cuanto se repites o cuantas veces se repite*/
-    animation-iteration-count: infinite;
-
-    /*El estilo de la animacion*/
-    animation-timing-function: ease-in;
-
-    /*Duración*/
-    animation-duration: 2s;
-
-    /*En cuanto tiempo quiero que empiece*/
-    /* animation-delay: 10s; */
-
-}
-
-@keyframes un_efecto {
-    0%{ 
-        width: 100px; 
-    }
-
-    10%{ 
-        width: 50px; 
-    }
-
-    25%{ 
-        width: 300px; 
-    }
-    
-    50%{
-        width: 200px;
-        background-color: red; 
-    }
-    
-    75%{ 
-        width: 300px;
-    }
-    
-    100%{ 
-        width: 100px;
-        background-color: blue;
-    }
-}
-
-/*Animacion de la barra de progreso*/
-.barra-progreso {
-    margin-top: 40px;
-    width: 80%;
-    border: solid 1px;
-    height: 7px;
-}
-
-.barra-rellena {
-    border: solid 1px;
-    height: 6px;
-    /* width: 60%; */
-    background-color: red;
-
-    animation: cargando 3s ;
-}
-
-@keyframes cargando {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 100%;
-    }
-}
-
-h1 {
-    animation-duration: 2s;
-    animation-name: aparecer;
-    animation-iteration-count: infinite;
-font-family: 'Roboto', sans-serif!important;
-}
-
-@keyframes aparecer {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
- }
- 
- /*CLASE DE GIT*/
-.titulo-git {
-    font-size: 2rem;
-    color: #fff;
-}
-
-/*BOOTSTRAP*/
-.padre-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-@media (min-width: 768px) {
-    .padre-cards {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-}
-
-#carouselExample {
-    width: 400px;
-}
+    transition: all .3s; }
+    .menu__nav li a:hover {
+      background-color: #000;
+      color: green;
+      padding: 10px;
+      border-radius: 10%; }
 
 /*CLASE 12 PSEUDOCLASES*/
 .body-index {
-    background-color: #000;
-    color: #fff;
-}
+  background-color: #000;
+  color: #fff; }
 
 /*FIRST*/
 .pseudo1 p:first-of-type {
-    color: red;
-}
+  color: red; }
 
 /*.pseudo1 p:first-child {
     color: red;
 }*/
-
 /*LAST*/
 .pseudo1 p:last-of-type {
-    color: red;
-}
+  color: red; }
 
 /*.pseudo1 p:last-child {
     color: red;
 }*/
-
 /*A elementos impares o pares*/
 /*Elementos pares*/
 /* .pseudo1 p:nth-child(even) {
     background-color: blue;
 } */
-
 .pseudo1 p:nth-of-type(4) {
-    background-color: yellow;
-}
+  background-color: yellow; }
 
 /*Elementos impares*/
 .pseudo1 p:nth-child(odd) {
-    background-color: green;
-}
+  background-color: green; }
 
 /*Target*/
 .nav-link {
-    background-color: yellow;
-}
+  background-color: yellow; }
 
 /*.nav-item {
     margin-bottom: 20px;
 }*/
-
-
 .nav-item:not(:first-of-type) {
-    margin-bottom: 20px;
-}
-
+  margin-bottom: 20px; }
 
 .nav-link:hover {
-    background-color: blue;
-}
+  background-color: blue; }
 
 .nav-link:active {
-    background-color: orange;
-}
+  background-color: orange; }
 
 /*FILTRO DE PRODUCTOS*/
 .container-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    justify-items: center;
-}
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center; }
 
 @media (max-width: 768px) {
-    .container-cards {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
+  .container-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center; } }
 
 @media (max-width: 992px) and (min-width: 769px) {
-    .container-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+  .container-cards {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media (min-width: 1200px) {
-    .container-cards {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
+  .container-cards {
+    grid-template-columns: repeat(4, 1fr); } }
 
 .container-opciones {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
+  display: flex;
+  justify-content: center;
+  gap: 30px; }
 
 .container-opciones label {
-    cursor: pointer;
-    padding: 8px 15px;
-}
+  cursor: pointer;
+  padding: 8px 15px; }
 
 .container-opciones label:nth-of-type(odd) {
-    background-color: red;
-}
+  background-color: red; }
 
 .container-opciones label:nth-of-type(even) {
-    background-color: green;
-}
+  background-color: green; }
 
 #remeras,
 #pc,
 #todos {
-    display: none;
-}
+  display: none; }
 
 .card-remeras,
 .card-pc {
-    display: none;
-}
+  display: none; }
 
 #remeras:checked ~ .container-cards .card-remeras,
 #pc:checked ~ .container-cards .card-pc {
-    display: flex;
-}
+  display: flex; }
 
+/*ANTES DE SASS*/
+/*USANDO SASS SASS*/
 #todos:checked ~ .container-cards .card-remeras,
 #todos:checked ~ .container-cards .card-pc {
-    display: flex;
-}
+  display: flex; }
+
+/*Estilo de las cards*/
+#productos {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem; }
+
+/*Codigo de #productos*/
+.card {
+  background-color: orange;
+  padding: 3rem;
+  margin: 5rem 0;
+  width: 200px;
+  border: solid 3px red;
+  position: relative; }
+
+.card__oferta {
+  position: absolute;
+  top: 30px;
+  right: -50px;
+  background-color: green; }
+
+.card__imagen {
+  width: 200px; }
+
+.card__titulo {
+  margin: 1rem 0; }
+
+/*GRIDS POR AREAS*/
+/* GRID MOBILE FIRST */
+/*CODIGO PARA CELULAR*/
+/*IMPLICITAMENTE, ESTE CÓDIGO VA DESDE 0PX HASTA 767PX*/
+#grilla {
+  display: grid;
+  grid-template-areas: "menu cabecera cabecera" "menu productos publicidad" "menu servicios publicidad" "menu footer footer";
+  grid-template-rows: 100px 1fr 1fr 75px;
+  grid-template-columns: 20% auto 15%;
+  column-gap: 10px;
+  row-gap: 10px;
+  height: 100vh;
+  /*vh = viewport height*/ }
+
+.border {
+  border: 1px solid black;
+  background-color: yellow; }
+
+/*Cuando la pantalla mida COMO MINIMO 768 PX (TABLET) HAGA ESTE CÓDIGO*/
+/*En mobile first dentro de las media queries solo escribir lo que SE NECESITA CAMBIAR*/
+@media screen and (min-width: 768px) {
+  #grilla {
+    grid-template-columns: repeat(4, 1fr); }
+  .border {
+    border: 4px solid black;
+    background-color: blue; } }
+
+/*Cuando la pantalla mida COMO MINIMO 1024PX (NOTEBOOKS Y PCs chicas) HAGA ESTE CÓDIGO*/
+@media screen and (min-width: 1024px) {
+  #grilla {
+    grid-template-columns: repeat(3, 1fr); }
+  .border {
+    border: 4px solid black;
+    background-color: green; } }
+
+header {
+  grid-area: cabecera; }
+
+footer {
+  grid-area: footer; }
+
+section#productosgrid {
+  grid-area: productos; }
+
+section#servicios {
+  grid-area: servicios; }
+
+nav {
+  grid-area: menu; }
+
+aside {
+  grid-area: publicidad; }
+
+/*EJEMPLO DEL PROFE*/
+/*Usando Mobile First*/
+#body-ejemplo {
+  display: grid;
+  grid-template-areas: "cabecera-profe" "galeria" "banners" "footer-profe";
+  grid-template-columns: 1fr;
+  background-color: red; }
+
+/*Body en 768px tablet*/
+@media screen and (min-width: 768px) {
+  #body-ejemplo {
+    grid-template-areas: "cabecera-profe cabecera-profe" "galeria galeria" "banners banners" "footer-profe footer-profe";
+    grid-template-columns: repeat(2, 1fr); } }
+
+/*Estilos del header*/
+#header-profe {
+  grid-area: cabecera-profe;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 3rem; }
+
+@media screen and (min-width: 768px) {
+  #header-profe {
+    flex-direction: row; } }
+
+.nav-profe {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 2rem; }
+
+.nav-profe li a {
+  color: white; }
+
+/*Estilos galeria*/
+#galeria-profe {
+  grid-area: galeria; }
+
+#galeria-profe h2 {
+  text-align: center; }
+
+.fotos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem; }
+
+@media screen and (min-width: 768px) {
+  .fotos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    column-gap: 1rem; } }
+
+@media screen and (min-width: 1024px) {
+  .fotos {
+    grid-template-columns: repeat(3, 1fr); } }
+
+.fotos img {
+  width: 20rem;
+  height: 10rem; }
+
+/*ESTILO DE LOS BANNERS*/
+#banners-profe {
+  grid-area: banners;
+  margin-top: 2rem; }
+
+#banners-profe h3 {
+  text-align: center;
+  margin-bottom: 1rem; }
+
+.padre-banner {
+  background-color: #eaeaea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem; }
+
+@media screen and (min-width: 768px) {
+  .padre-banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center; } }
+
+@media screen and (min-width: 1024px) {
+  .padre-banner {
+    grid-template-columns: repeat(4, 1fr); } }
+
+.hijo-banner {
+  text-align: center; }
+
+/*Estilos del footer*/
+#footer-profe {
+  grid-area: footer-profe;
+  margin-top: 2rem;
+  background-color: #000; }
+
+#footer-profe p {
+  font-size: 1.8rem;
+  color: white;
+  text-align: center; }
+
+/*CLASE 8: ANIMACIONES*/
+/*GRADIENTES*/
+/*Lineal*/
+.gradiente-lineal {
+  background-color: blue; }
+
+/*Radial*/
+.gradiente-radial {
+  background-image: radial-gradient(red 5%, yellow 15%, green 60%); }
+
+/*TRANSFORMACIONES*/
+.caja-animaciones {
+  background-image: url(../img/remera_html5.jpg);
+  width: 300px;
+  height: 300px;
+  /*Translate*/
+  /*translate (lleva dos valores, el primero mueve de izquierda a derecha y el segundo de arriba hacia abajo)*/
+  /*transform: translate(50px, 100px);*/
+  /*Para mover a un solo lado usar X o Y*/
+  transform: translateX(60px);
+  /*Rotate*/
+  /*Valores siempre en grados (degress)*/
+  /* transform: rotateX(70deg); */
+  /*Scale*/
+  /* transform: scaleY(2); */
+  /*Skew*/
+  /* transform: skew(20deg, 10deg); */
+  /* transform: skewX(20deg); */
+  transition: height 3s, width 3s; }
+
+.caja-animaciones:hover {
+  /* transform: scale(2); */
+  /* margin-top: 400px; */
+  height: 400px;
+  width: 600px; }
+
+.javascript {
+  transition: all 1s; }
+
+.javascript:hover {
+  transform: scale(1.5, 1.5);
+  cursor: pointer; }
+
+.focus-animado {
+  transition: all 1s; }
+
+.focus-animado:focus {
+  width: 400px; }
+
+/*KEYFRAMES*/
+/*EJEMPLO DE LA DIAPOSITIVA*/
+.keyframe {
+  margin-top: 60px;
+  background-color: black;
+  width: 250px;
+  height: 250px;
+  /*Nombre de la animacion*/
+  animation-name: un_efecto;
+  /*Por cuanto se repites o cuantas veces se repite*/
+  animation-iteration-count: infinite;
+  /*El estilo de la animacion*/
+  animation-timing-function: ease-in;
+  /*Duración*/
+  animation-duration: 2s;
+  /*En cuanto tiempo quiero que empiece*/
+  /* animation-delay: 10s; */ }
+
+@keyframes un_efecto {
+  0% {
+    width: 100px; }
+  10% {
+    width: 50px; }
+  25% {
+    width: 300px; }
+  50% {
+    width: 200px;
+    background-color: red; }
+  75% {
+    width: 300px; }
+  100% {
+    width: 100px;
+    background-color: blue; } }
+
+/*Animacion de la barra de progreso*/
+.barra-progreso {
+  margin-top: 40px;
+  width: 80%;
+  border: solid 1px;
+  height: 7px; }
+
+.barra-rellena {
+  border: solid 1px;
+  height: 6px;
+  /* width: 60%; */
+  background-color: red;
+  animation: cargando 3s; }
+
+@keyframes cargando {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+
+h1 {
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count: infinite;
+  font-family: "Roboto", sans-serif !important; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*CLASE DE GIT*/
+.titulo-git {
+  font-size: 2rem;
+  color: #fff; }
+
+/*BOOTSTRAP*/
+.padre-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+@media (min-width: 768px) {
+  .padre-cards {
+    flex-direction: row;
+    flex-wrap: wrap; } }
+
+#carouselExample {
+  width: 400px; }

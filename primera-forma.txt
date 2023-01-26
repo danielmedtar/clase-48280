@@ -1,0 +1,28 @@
+PRIMERA FORMA PARA INICIAR SASS:
+
+OJO: SI YA TIENEN UN CSS CREADO, ANTES DE ARRANCAR SASS LA PRIMERA VEZ COPIAR TODO EL CODIGO CSS EN UN BLOCK DE NOTAS O UN WORD. ES POSIBLE QUE AL ARRANCARLO SE LOS BORRE. ¡TENGAN RESPALDO ANTES!
+
+1. Descargar e instalar node.js (si ya lo tienen instalado no hace falta reinstalar)
+
+2. Abrir consola y escribir npm init
+
+3. Presionar enter hasta llegar a la pregunta "is this ok?" Y escribimos yes
+
+4. npm install -D node-sass nodemon
+
+5. En el package.json, en la linea 7 que empieza por test al final poner una coma y escribir lo siguiente 
+
+"build-css": "node-sass --include-path scss scss/styles.scss css/styles.css",
+"watch-css": "nodemon -e scss -x \"npm run build-css\""
+
+Su package.json deberia quedar así:
+
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/styles.scss css/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+
+  Recuerden cambiar los nombres de los archivos
+
+6. npm run watch-css

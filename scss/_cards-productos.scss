@@ -1,0 +1,36 @@
+/*Estilo de las cards*/
+#productos {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+/*Codigo de #productos*/
+.card {
+    background-color: orange;
+    padding: 3rem;
+    margin: $espaciado-grande 0;
+    width: 200px;
+    border: solid 3px red;
+    position: relative;
+}
+
+.card__oferta {
+    position: absolute;
+    top: 30px;
+    right: -50px;
+    background-color: green;
+}
+
+.card__imagen {
+    width: 200px;
+
+}
+
+.card__titulo {
+    margin: 1rem 0;
+}
